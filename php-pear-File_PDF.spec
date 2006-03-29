@@ -8,7 +8,7 @@ Summary:	%{_pearname} - PDF generation using only PHP
 Summary(pl):	%{_pearname} - generowanie PDF za pomoc± samego PHP
 Name:		php-pear-%{_pearname}
 Version:	0.0.2
-Release:	2
+Release:	3
 Epoch:		0
 License:	LGPL
 Group:		Development/Languages/PHP
