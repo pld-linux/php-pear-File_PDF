@@ -3,13 +3,11 @@
 %define		_subclass	PDF
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - PDF generation using only PHP
 Summary(pl.UTF-8):	%{_pearname} - generowanie PDF za pomocą samego PHP
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
-Release:	1
-Epoch:		0
+Release:	2
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -20,6 +18,7 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:4.2.0
 Requires:	php-pear
+Suggests:	php-pear-HTTP_Download
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,8 +32,8 @@ any external libraries.
 In PEAR status of this package is: %{_status}.
 
 %description -l pl.UTF-8
-Ta klasa umożliwia generowanie dokumentów PDF za pomocą samego PHP, bez
-konieczności posiadania zewnętrznych bibliotek.
+Ta klasa umożliwia generowanie dokumentów PDF za pomocą samego PHP,
+bez konieczności posiadania zewnętrznych bibliotek.
 
 Ta klasa ma w PEAR status: %{_status}.
 
@@ -42,9 +41,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoReq:	no
+Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
