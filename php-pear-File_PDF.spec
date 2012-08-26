@@ -1,13 +1,11 @@
-%include	/usr/lib/rpm/macros.php
-%define		_class		File
-%define		_subclass	PDF
 %define		_status		beta
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname	File_PDF
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - PDF generation using only PHP
 Summary(pl.UTF-8):	%{_pearname} - generowanie PDF za pomocą samego PHP
 Name:		php-pear-%{_pearname}
 Version:	0.3.3
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -16,7 +14,7 @@ URL:		http://pear.php.net/package/File_PDF/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php-common >= 3:4.2.0
+Requires:	php(core) >= 4.2.0
 Requires:	php-pear
 Suggests:	php-pear-HTTP_Download
 Obsoletes:	php-pear-File_PDF-tests
@@ -58,5 +56,5 @@ fi
 %defattr(644,root,root,755)
 %doc install.log optional-packages.txt
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}
+%{php_pear_dir}/File/*.php
+%{php_pear_dir}/File/PDF
