@@ -1,6 +1,5 @@
 %define		_status		beta
 %define		_pearname	File_PDF
-%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - PDF generation using only PHP
 Summary(pl.UTF-8):	%{_pearname} - generowanie PDF za pomocą samego PHP
 Name:		php-pear-%{_pearname}
